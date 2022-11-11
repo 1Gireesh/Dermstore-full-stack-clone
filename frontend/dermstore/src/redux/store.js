@@ -7,4 +7,4 @@ const rootReducer = combineReducers({
     auth: authReducer
 })
 
-export const store = () => legacy_createStore(applyMiddleware(thunk), rootReducer);
+export const store = legacy_createStore(rootReducer,applyMiddleware(thunk))
