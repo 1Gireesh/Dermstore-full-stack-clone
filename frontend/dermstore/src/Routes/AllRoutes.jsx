@@ -1,18 +1,17 @@
 import { Route, Routes } from "react-router-dom";
-import { Cart } from "../pages/cart_section/Cart";
 
 function AllRoutes() {
   return (
     <div
-      style={{
-        marginTop: "170px",
-      }}
+    // style={{
+    //   marginTop: "169px",
+    // }}
     >
       <Routes>
         <Route path="/" element={<h1>HOME</h1>} />
         <Route path="/register" element={<h1>REGISTER</h1>} />
         <Route path="/login" element={<h1>LOGIN</h1>} />
-        <Route path="/cart" element={<Cart></Cart>} />
+        <Route path="/cart" element={<h1>CART</h1>} />
         <Route path="/brands" element={<h1>BRANDS</h1>} />
         <Route path="/holiday+by" element={<h1>HOLIDAY BY</h1>} />
         <Route path="/browse+by" element={<h1>BROWSE BY</h1>} />
