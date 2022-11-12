@@ -3,9 +3,14 @@ import Navbar from "./Components/Navbar/Navbar";
 import AllRoutes from "./Routes/AllRoutes";
 import { Cart } from "./pages/cart_section/Cart";
 import { ChakraProvider } from "@chakra-ui/react";
+import { useState } from "react";
+import { useSelector } from "react-redux";
+
 function App() {
+
+
   return (
-    <div>
+    <div id="app" >
       <ChakraProvider>
         <Cart />
       </ChakraProvider>

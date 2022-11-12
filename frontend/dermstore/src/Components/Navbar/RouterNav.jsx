@@ -68,8 +68,8 @@ function RouterNav() {
   return (
     <div className="router_nav_main">
       <div className="router_container">
-        {links.map((link) => (
-          <div className="router_link_container">
+        {links.map((link,i) => (
+          <div className="router_link_container" key={i} >
             <NavLink className="all_router_link" to={link.path}>
               {link.title}
             </NavLink>
