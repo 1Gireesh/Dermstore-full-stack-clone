@@ -13,7 +13,7 @@ export const cartReducer = (state = initState, { type, payload }) => {
             {
                 let price = 0;
                 console.log(payload)
-                payload.map((e, i) => price += ((e.product.price || 10) * e.quantity))
+                payload.map((e, i) => price += ((e.product.price) * e.quantity))
                 return { cartItems: payload, price: price }
             }
 

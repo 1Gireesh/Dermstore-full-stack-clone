@@ -3,7 +3,6 @@ const User = require("./user.model");
 
 const app = express.Router();
 
-app.get("/", (req, res) => User.find().then((r) =>   res.send(r)));
 
 
 app.post("/signup", async (req, res) => {
@@ -13,20 +12,15 @@ app.post("/signup", async (req, res) => {
     try {
         console.log(exUser);
         if (exUser)
-            res.send("ye email allready exist hota hai");
+            res.send("this email allready exists");
         else {
             let nv = await User.create({ ...req.body });
-            res.send(`${nv._id}-${email}-${password}`);
+            res.send("succesfully signedup");
         }
-
     }
     catch (e) {
-        res.status(401).send(e);
+        res.status(401).send(e.message);
     }
-
-
-
-
 })
 
 app.post("/login", async (req, res) => {
@@ -37,15 +31,13 @@ app.post("/login", async (req, res) => {
             if (user.password == password) {
                 console.log(user, password)
                 res.send(`${user._id}-${email}-${password}`);
-
             }
             else {
-                res.send("password galat hai");
+                res.send("wrong password");
             }
-
         }
         else
-            res.send("pahale sign up karo");
+            res.send("the given email does not exist");
 
 
     }

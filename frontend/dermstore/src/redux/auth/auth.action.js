@@ -1,5 +1,5 @@
 import axios from "axios"
-import { Login, Logout } from './auth.actionTypes';
+import { Login, Logout, Signup } from './auth.actionTypes';
 
 export const login = (obj) => async (dispatch) => {
     let res = await axios.post("", obj);

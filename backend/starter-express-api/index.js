@@ -20,6 +20,6 @@ app.all('/', (req, res) => {
     res.send('Yo!')
 })
 
-app.listen( 3000, async () => {
+app.listen( 8080, async () => {
     await connect();
 })

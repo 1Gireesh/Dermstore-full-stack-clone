@@ -6,13 +6,9 @@ const cartSchema = new mongoose.Schema({
         required: true
     },
     user: {
-        type: String,
-        // required: true
+        type: String
     },
-    quantity: { type: Number, required: true },
-    id:{
-        type: Number
-    }
+    quantity: { type: Number, required: true }
 }, {
     versionKey: false,
     timestamps: true
