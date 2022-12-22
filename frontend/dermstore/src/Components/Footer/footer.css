@@ -1,0 +1,256 @@
+.footer{
+	/* display: grid;
+	grid-template-columns: repeat(2, 1fr); */
+	display: flex;
+}
+
+.footercard{
+	width: 75%;
+	margin: auto;
+}
+.bg-service{
+	/* border: 1px solid red; */
+	height: 140px;
+	width: 98%;
+	margin: auto;
+	display: flex;
+}
+.bg-cont{
+	/* border: 1px solid red; */
+	height: 140px;
+	width: 98%;
+	margin: auto;
+}
+.bg-cont>div{
+	margin-top: 50px;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+.bg-cont>button{
+	margin-left: 5px;
+	display: inline;
+	background-color: black;
+	color: white;
+	font-size: 16px;
+	height: 40px;
+	width: 20%;
+}
+.divunderhr{
+	margin-top: 30px;
+}
+.bg-social{
+	margin-left: 15px;
+}
+.bg-cont>span{
+	margin-left: 15px;
+	
+}
+.social-icon{
+	width: 30px;
+	height: 30px;
+	background-color: rgb(202, 202, 199);
+	border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px; 
+}
+.bg-cont>button:hover,.social-icon:hover{
+	background-color: rgb(211, 211, 211);
+	border: none;
+}
+.bg-cont>img{
+	display: inline-block;
+	width: 40px;
+	margin-left: 25px;
+}
+.footer>div{
+	/* border: 1px solid  red; */
+	height: 330px;
+	width: 48%;
+    margin: auto;
+}
+.firstcontiner>ul>li{
+	margin-top: 10px;
+}
+.icon{
+	
+	width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: 6px;
+}
+.firstcontiner>ul{
+	
+	list-style: none;
+	margin-left: -30px;
+	margin-right: -30px;
+    padding-left: 35px;
+    padding-right: 30px;
+	display: inline-block;
+
+}
+
+.secoundcontiner{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr)
+}
+.secoundcontiner>div{
+	/* border: 1px solid  red; */
+    height: 330px;
+    width: 90%;
+   
+}
+
+.secoundcontiner>div>ul{
+	list-style: none;
+	/* margin-top: 10px; */
+	margin-left: -30px;
+	margin-right: -30px;
+    padding-left: 35px;
+    padding-right: 30px;
+	display: inline-block;
+
+}
+.secoundcontiner>div>ul>li{
+	margin-top: 15px;
+}
+@media screen and (max-width: 800px) and (min-width: 650px){
+
+	.bg-cont>button{
+		display:none;
+	}
+
+}
+
+
+
+@media screen and (max-width: 650px) and (min-width: 300px){
+
+	
+	
+	.footercard{
+		width: 98%;
+		/* margin: auto; */
+		/* height: 1050px; */
+	}
+	.bg-service{
+		
+		height: auto;
+		/* width:; */
+		/* margin: auto; */
+		/* display: flex; */
+		display: grid;
+       grid-template-columns: repeat(1, 1fr);
+	}
+	.bg-cont{
+		/* border: 1px solid rgb(43, 255, 0); */
+		height: 140px;
+		width: 100%;
+		/* display: block; */
+        padding-bottom: 10px;
+		/* margin: auto; */
+	}
+	.bg-cont>div{
+		/* margin-top: 50px; */
+		font-size: 14px;
+		/* margin-bottom: 20px; */
+	}
+	.bg-cont>button{
+		/* margin-left: 5px; */
+		display: inline;
+		background-color: black;
+		color: white;
+		font-size: 11px;
+		height: autofill;
+		width: 35%;
+		
+	}
+	.divunderhr{
+		margin-top: 30px;
+	}
+	.bg-social{
+		margin-left: 15px;
+	}
+	.bg-cont>span{
+		margin-left: 15px;
+		
+	}
+	.social-icon{
+		width: 30px;
+		height: 30px;
+		background-color: rgb(202, 202, 199);
+		border-radius: 50%;
+		display: inline-block;
+		/* margin-right: 10px;  */
+	}
+	.bg-cont>button:hover,.social-icon:hover{
+		background-color: rgb(211, 211, 211);
+		border: none;
+	}
+	.bg-cont>img{
+		display: inline-block;
+		width: 40px;
+		margin-left: 25px;
+	}
+	.footer{
+		display: grid;
+		grid-template-columns: 1fr;
+        
+	}
+	.footer>div{
+		/* border: 1px solid  red; */
+		/* height: 330px; */
+		width: 98%;
+		/* margin: auto; */
+	}
+	.firstcontiner>ul>li{
+		margin-top: 10px;
+	}
+	.icon{
+		
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		margin-top: 6px;
+	}
+	.firstcontiner>ul{
+		
+		list-style: none;
+		margin-left: -30px;
+		margin-right: -30px;
+		padding-left: 35px;
+		padding-right: 30px;
+		display: inline-block;
+	
+	}
+	
+	.secoundcontiner{
+		display: grid;
+		grid-template-columns: repeat(1, 1fr)
+	}
+	.secoundcontiner>div{
+		/* border: 1px solid  red; */
+		height: 330px;
+		width: 90%;
+	   
+	}
+	
+	.secoundcontiner>div>ul{
+		list-style: none;
+		/* margin-top: 10px; */
+		margin-left: -30px;
+		margin-right: -30px;
+		padding-left: 35px;
+		padding-right: 30px;
+		display: inline-block;
+	
+	}
+	.secoundcontiner>div>ul>li{
+		margin-top: 15px;
+	}
+	
+
+	.thg-privacy{
+		margin-top: 100%;
+	}
+
+}
