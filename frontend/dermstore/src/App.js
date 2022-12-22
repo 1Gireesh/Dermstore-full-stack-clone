@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import HomePage from './pages/HomePage';
-import AppContextProvider from './allApi/AppContex';
+import AppContextProvider from './Context/AppContex';
 import AllRoutes from './Routes/AllRoutes';
 import Navbar from './Components/Navbar/Navbar';
-import  Footer  from './Components/Footer/Footer';
+import  {Footer}  from './Components/Footer/Footer';
 
 function App() {
   return (

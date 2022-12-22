@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Login from "../Components/Login";
+import  {CheckoutPage}  from "../Components/Payment/CheckoutPage";
 import Register from "../Components/Register";
 import { Cart } from "../pages/cart_section/Cart";
 import HomePage from "../pages/HomePage";
@@ -20,6 +21,7 @@ function AllRoutes() {
         <Route path="/cart" element={<Cart></Cart>} />
         <Route path="/products" element={<Products></Products>} />
         <Route path="/preview/:id" element={<Preview></Preview>} />
+        <Route path="/checkout" element={<CheckoutPage/>} />
       </Routes>
     </div>
   );
