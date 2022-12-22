@@ -1,8 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import Carousel from './sider/Carousel'
-import Carousel2 from './sider/Carousel2'
-import SiderTwocard from './sider/SiderTwocard'
+import Carousel from '../pages/sider/Carousel'
+import Carousel2 from '../pages/sider/Carousel2'
+import SiderTwocard from '../pages/sider/SiderTwocard'
 
 const Bestsellers = ({ data }) => {
 

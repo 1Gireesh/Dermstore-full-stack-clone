@@ -4,7 +4,7 @@
 
 import React, { useState,useContext } from "react";
 import { useEffect } from "react";
-import { AuthContext } from "../allApi/AppContex";
+import { AuthContext } from "./Context/AppContex";
 import Bestsellers from "./Bestsellers";
 
 

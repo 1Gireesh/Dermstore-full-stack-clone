@@ -1,13 +1,13 @@
 import React from "react";
 import CartCSS from "./Cart.module.css";
 import { Box } from "@chakra-ui/react";
-import Checkoutbtn from "../../Components/cart_components/Checkoutbtn";
-import Bar from "../../Components/cart_components/Bar";
+import Checkoutbtn from "../cart_components/Checkoutbtn";
+import Bar from "../cart_components/Bar";
 import { BsStars } from "react-icons/bs";
-import CartItem from "../../Components/cart_components/CartItem";
-import Discount from "../../Components/cart_components/Discount";
+import CartItem from "../cart_components/CartItem";
+import Discount from "../cart_components/Discount";
 import { useDispatch, useSelector } from "react-redux";
-import GiftCard from "../../Components/cart_components/GiftCard";
+import GiftCard from "../cart_components/GiftCard";
 import { getCarts } from "../../redux/Cart/cart.action";
 
 export function Cart() {

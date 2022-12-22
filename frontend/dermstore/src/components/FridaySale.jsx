@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import SiderTwocard from './sider/SiderTwocard'
+import SiderTwocard from '../pages/sider/SiderTwocard'
 
 const FridaySale = ({ data }) => {
 

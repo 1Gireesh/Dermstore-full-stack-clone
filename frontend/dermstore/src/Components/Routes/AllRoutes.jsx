@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import Login from "../Components/Login";
-import Register from "../Components/Register";
-import { Cart } from "../pages/cart_section/Cart";
-import HomePage from "../pages/HomePage";
-import Preview from "../pages/Preview";
+import Login from "../../pages/Login/Login";
+import Register from "../Register";
+import { Cart } from "../../pages/cart_section/Cart";
+import HomePage from "../../pages/HomePage";
+import Preview from "../../pages/Preview";
 
 function AllRoutes() {
   return (
