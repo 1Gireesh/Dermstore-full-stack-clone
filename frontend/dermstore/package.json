@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@chakra-ui/react": "^2.3.7",
+    "@chakra-ui/icons": "^2.0.14",
+    "@chakra-ui/react": "^2.4.4",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.10.9",
@@ -12,20 +13,20 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.1.3",
+    "axios": "^1.2.1",
     "cors": "^2.8.5",
-    "framer-motion": "^7.6.6",
+    "framer-motion": "^7.10.3",
     "i": "^0.3.7",
     "npm": "^9.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-form-input-validation": "^2.1.0",
-    "react-icons": "^4.6.0",
+    "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
     "react-responsive-carousel": "^3.2.23",
-    "react-router-dom": "^6.4.3",
+    "react-router-dom": "^6.5.0",
     "react-scripts": "5.0.1",
-    "react-slideshow-image": "^4.0.5",
+    "react-slideshow-image": "^4.1.1",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.2",
     "styled-components": "^5.3.6",
@@ -54,5 +55,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "case-sensitive-paths-webpack-plugin": "^2.4.0"
   }
 }

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import "../../css/Navbar_css/search.css";
+import "./style/search.css";
 import recomendNames from "./searchRecomendations.json";
 
 const recomend = val => {
