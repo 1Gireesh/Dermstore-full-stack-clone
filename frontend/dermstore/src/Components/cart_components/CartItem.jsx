@@ -1,40 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { Flex, Spacer, Box, Image, Text } from "@chakra-ui/react";
-import CountSection from "./CountSection";
-import { FaTimes } from "react-icons/fa";
-import { useDispatch } from "react-redux";
-import { removeCart } from "../../redux/Cart/cart.action";
-function CartItem({ product, quantity }) {
-  let price = product.price || 10;
+import React from 'react'
 
-
-  const dispatch = useDispatch();
-
+export default function CartItem() {
   return (
-    <>
-      <Flex fontSize={'1.2rem'} w={"90vw"} justify='space-between'  align={'center'} px='0.3rem' mt={"10px"} boxShadow={"1px 1px 10px black"} >
-        <Box>
-          <Image
-            w={"50px"}
-            src={product.url}
-            alt=""
-          />
-        </Box>
-        <Box>
-          <Text>{product.name}</Text>
-          {/* <Text>{product.description}</Text> */}
-        </Box>
-        <Box>
-          <Text>${price}</Text>
-        </Box>
-        <Box>
-          <CountSection price={price} quantity={quantity} id={product.id} />
-        </Box>
-        <Box><Text>{price * quantity}</Text></Box>
-        <Box ><FaTimes onClick={() => { dispatch(removeCart(product.id,"g")) }} /></Box>
-      </Flex>
-    </>
-  );
+    <div>
+      <div className="tbody">
+          <div className="first">
+            <img src="https://static.thcdn.com//productimg/70/70/13890001-1484997222551821.jpg" alt="" />
+            <p>BIOEFFECT Firming Favorites Set (Worth $270.00)</p>
+          </div>
+          <p className="price">$302</p>
+          <p className="quantity">
+            <button>+</button>
+            4
+            <button>-</button>
+          </p>
+          <p className="">$3259</p>
+        </div>
+    </div>
+  )
 }
-
-export default CartItem;

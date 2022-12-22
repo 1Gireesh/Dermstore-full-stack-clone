@@ -2,8 +2,11 @@ import React from "react";
 import { useFormInputValidation } from "react-form-input-validation";
 import "../css/ValidationForm.css";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const ValidationForm = () => {
+
+
   const [fields, errors, form] = useFormInputValidation(
     {
       full_name: "",
@@ -30,7 +33,7 @@ const ValidationForm = () => {
   const onSubmit = async (event) => {
     const isValid = await form.validate(event);
     if (isValid) {
-      //   console.log(fields);
+      axios.post("http://localhost:8080/login")
       // Perform api call here
       localStorage.setItem("signup", JSON.stringify(fields));
       navigate("/login");

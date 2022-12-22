@@ -6,10 +6,8 @@ const User = require("../users/user.model")
 
 const Auth = async (req, res, next) => {
     let { token } = req.headers;
-
     req.userId = token;
     next();
-
 }
 
 const app = express.Router();
@@ -18,7 +16,6 @@ app.use(Auth);
 
 app.get("/", async (req, res) => {
     let { token } = req.headers || req.userId;
-
     let carts = await Cart.find({ user: token })
     res.send(carts);
 });
@@ -29,14 +26,11 @@ app.post("/", async (req, res) => {
     let id = req.userId || req.headers.token;
     console.log(id, req.body)
     try {
-
-        // let item = await Cart.create({      ...req.body,        })
         let b = await Product.findOne({ id: req.body.product })
         let cart = await Cart.create({
             product: b,
             user: id,
             quantity: req.body.quantity,
-            id: b.id
         })
         res.send(cart);
 
@@ -49,7 +43,6 @@ app.post("/", async (req, res) => {
 
 app.delete("/", async (req, res) => {
     let [uid, id] = req.userId && req.userId.split(" ");
-    // console.log(uid, id)
     try {
 
         let cart = await Cart.findOneAndDelete({ id: id, user: uid })
@@ -63,7 +56,7 @@ app.delete("/", async (req, res) => {
 })
 
 
-// console.log(c)
+
 
 
 app.patch("/", async (req, res) => {

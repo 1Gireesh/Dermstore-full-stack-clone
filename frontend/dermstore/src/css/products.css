@@ -1,0 +1,66 @@
+.products {
+  margin-top: 150px;
+}
+.productGrid {
+  display: grid;
+  width: 80%;
+  margin-left: 20%;
+  grid-template-columns: repeat(3, 1fr);
+}
+.productContainer p {
+  max-width: 400px;
+  text-align: center;
+}
+.productContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.productContainer > img {
+  min-width: 200px;
+  min-width: 200px;
+  max-height: 200px;
+  max-height: 200px;
+}
+.mrp {
+  text-decoration: line-through;
+}
+.productContainer>div>div {
+    display: flex;
+    justify-content: space-between;
+}
+.productContainer>div {
+  max-height: 320px;
+  max-height: 320px;
+}
+
+.productContainer button {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: larger;
+}
+
+.sidebar{
+    width: 18%;
+    height: 70vh;
+    position: absolute;
+    top: 200px;
+}
+.sidebar input{
+    width: 80%;
+}
+
+@media only screen and (max-width: 1100px) {
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .productGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
