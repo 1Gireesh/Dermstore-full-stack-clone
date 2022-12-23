@@ -32,7 +32,7 @@ const FridaySale = ({ data }) => {
     <div className='friday'>
       
       {data.map((image, index) => (
-        <div onClick={()=>nv("/review/"+image.id)}>
+        <div onClick={()=>nv("/review/"+image.id)} className='friday'>
         <SiderTwocard
           className="image"
           img={image.url}

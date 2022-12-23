@@ -10,7 +10,7 @@ function App() {
   return (
     <div id="app">
       <AppContextProvider>
-        <Navbar></Navbar>
+         <Navbar></Navbar> 
         <AllRoutes></AllRoutes>
        <Footer></Footer>
       </AppContextProvider>
