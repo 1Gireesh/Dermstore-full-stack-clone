@@ -22,7 +22,7 @@ const SliderTwo = ({ data }) => {
   //getAPI()
 
   const sider = {
-    img: { width: '150%', marginLeft: '-50px' },
+    img: { width: '100%', marginLeft: '-50px' },
     btn: {
       backgroundColor: "black",
       border: "none",
@@ -44,24 +44,17 @@ const SliderTwo = ({ data }) => {
 
   return (
 
-    <div >
-      <Carousel
+    <div className='friday' >
+      {/* <Carousel
         show={3}
         infiniteLoop
-      >
+      > */}
 
 
 
-        {/* <SiderTwocard
-        img="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1586966591-20567.jpg?crop=1xw:1xh;center,top&resize=480:*"
-        style={sider.img}
-        text={"EltaMD UV Luminous Broad"}
-        btn={'Quick Buy'}
-        styleBtn={sider.btn}
 
-        /> */}
 
-        {data.map((image, index) => (
+        {data.slice(1,4).map((image, index) => (
           <SiderTwocard
             className="image"
             img={image.url}
@@ -76,7 +69,7 @@ const SliderTwo = ({ data }) => {
           />
         ))}
 
-      </Carousel>
+      {/* </Carousel> */}
     </div>
 
 

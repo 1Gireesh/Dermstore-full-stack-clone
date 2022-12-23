@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 // import Carousel from '../Carousel/Carousel';
@@ -65,24 +66,25 @@ const heading2 =
 
 const Slideshow = ({ data }) => {
   return (
-    <div style={{ zIndex: "0" }}>
+    <Link to={'/products'}>
+    <div style={{ zIndex: "0" }} className='newslider'>
       <Slide easing="ease">
         <div className="each-slide">
-          <div style={{ 'backgroundImage': `url(${slideImages[0]})` }}>
+          <div style={{ 'backgroundImage': `url(${slideImages[0]})` }} className='back'>
             <SideBox h1={"For Your Very Nice \nList"} p1={
               "Go ahead & splurge:Treate them everything on their list \nwith more time to pay.checkout with klara & \nafterPay with advantage of four interst free \npayment"
             } buttonText={"SHOP NOW"} style={color} style2={btn1} style3={heading} />
           </div>
         </div>
         <div style={{ zIndex: "0" }} className="each-slide">
-          <div style={{ 'backgroundImage': `url(${slideImages[1]})` }}>
+          <div style={{ 'backgroundImage': `url(${slideImages[1]})` }} className='back'>
             <SideBox h1={"For Your Very Nice \nList"} p1={
               "Go ahead & splurge:Treate them everything on their list \nwith more time to pay.checkout with klara & \nafterPay with advantage of four interst free \npayment"
             } buttonText={"SHOP NOW"} style={color} style2={btn1} style3={heading} />
           </div>
         </div>
         <div style={{ zIndex: "0" }} className="each-slide">
-          <div style={{ 'backgroundImage': `url(${slideImages[2]})` }}>
+          <div style={{ 'backgroundImage': `url(${slideImages[2]})` }} className='back'>
             <SideBox h1={"For Your Very Nice \nList"} p1={
               "Go ahead & splurge:Treate them everything on their list \nwith more time to pay.checkout with klara & \nafterPay with advantage of four interst free \npayment"
             } buttonText={"SHOP NOW"} style={color2} style2={btn2} style3={heading2} />
@@ -91,7 +93,7 @@ const Slideshow = ({ data }) => {
 
         </div>
         <div style={{ zIndex: "0" }} className="each-slide">
-          <div style={{ 'backgroundImage': `url(${slideImages[3]})` }}>
+          <div style={{ 'backgroundImage': `url(${slideImages[3]})` }} className='back'>
             <SideBox h1={"For Your Very Nice \nList"} p1={
               "Go ahead & splurge:Treate them everything on their list \nwith more time to pay.checkout with klara & \nafterPay with advantage of four interst free \npayment"
             } buttonText={"SHOP NOW"} style={color2} style2={btn2} style3={heading2} />
@@ -100,7 +102,7 @@ const Slideshow = ({ data }) => {
 
         </div>
         <div style={{ zIndex: "0" }} className="each-slide">
-          <div style={{ 'backgroundImage': `url(${slideImages[4]})` }}>
+          <div style={{ 'backgroundImage': `url(${slideImages[4]})` }} className='back'>
             <SideBox h1={"For Your Very Nice \nList"} p1={
               "Go ahead & splurge:Treate them everything on their list \nwith more time to pay.checkout with klara & \nafterPay with advantage of four interst free \npayment"
             } buttonText={"SHOP NOW"} style={color} style2={btn1} style3={heading} />
@@ -117,6 +119,7 @@ const Slideshow = ({ data }) => {
 
       </Slide>
     </div>
+    </Link>
   )
 };
 

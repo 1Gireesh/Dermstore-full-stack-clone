@@ -29,13 +29,13 @@ const Bestsellers = ({ data }) => {
   }
 
   return (
-    <div >
-      <Carousel2
+    <div className='friday'>
+      {/* <Carousel2
         show={4}
         infiniteLoop
-      >
+      > */}
         
-        {data.map((image, index, id) => (
+        {data.slice(1,5).map((image, index, id) => (
           <div onClick={() => nv(`preview/${image.id}`)}>
             <SiderTwocard
               className="image"
@@ -51,7 +51,7 @@ const Bestsellers = ({ data }) => {
             />
           </div>
         ))}
-      </Carousel2>
+      {/* </Carousel2> */}
     </div>
   )
 }
