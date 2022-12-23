@@ -6,6 +6,9 @@
   display: flex;
   max-width: 400px;
 }
+.first>img{
+  width: 100px;
+}
 .td{
     margin-left: 10px;
 }
@@ -13,7 +16,15 @@
   display: grid;
   margin: auto;
   width: 90%;
-  grid-template-columns: 2.5fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+}
+.delete{
+  width: 50px;
+  border-radius: 50%;
+}
+.delete img{
+  width: 30px;
+  border: none;
 }
 .thead span{
   font-size: larger;
@@ -24,7 +35,7 @@
   margin: auto;
   width: 90%;
   align-items: center;
-  grid-template-columns: 2.5fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
 }
 .quantity {
   display: flex;
@@ -35,19 +46,41 @@
   font-size: larger;
   border: none;
 }
-@media only screen and (max-width: 700px) {
-    .thead,
-    .tbody {
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-    }
+.cart>h2{
+text-align: center;
+}
+.tbody{
+  box-shadow: 1px 1px 10px black;
+  padding: 10px;
+}
+.cartItems{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 @media only screen and (max-width: 700px) {
+    .thead,
+    .tbody {
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+  .quantity{
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 600px) {
   .first {
     flex-direction: column;
   }
+  .tbody{
+    max-width: 90vw;
+  }
   .first > img {
-    width: 100px;
+    width: 50px;
   }
   .thead:nth-child(2) {
     display: none;
@@ -55,11 +88,20 @@
   .price {
     display: none;
   }
+ 
   .thead,
   .tbody {
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  .delete img{
+    width: 20px;
+  }
+  .delete{
+    margin-bottom: 15px;
   }
   .cart{
-    margin-top: 20vh;
+    margin-top: 30vh;
   }
 }

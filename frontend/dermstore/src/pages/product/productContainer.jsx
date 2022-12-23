@@ -1,5 +1,6 @@
 import React from 'react'
 import "../../css/products.css";
+import { Link } from 'react-router-dom';
 const random = Math.random();
 
 export default function productContainer({ product }) {
@@ -14,7 +15,9 @@ export default function productContainer({ product }) {
                     <p className='productPrice'>${product.price}</p>
                     <p>rating {product.rating}</p>
                 </div>
-                <button>QUICK BUY</button>
+                <Link to={"/preview/"+product._id}>
+                    <button>QUICK BUY</button>
+                </Link>
             </div>
         </div>
     )
