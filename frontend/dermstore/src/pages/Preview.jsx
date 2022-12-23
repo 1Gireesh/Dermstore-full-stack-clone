@@ -7,34 +7,30 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addCart, cartDecQty, cartIncQty } from "../redux/Cart/cart.action";
 
-let url = `https://wild-polo-shirt-calf.cyclic.app/products/`
-url = `http://localhost:3000/products/`
+import { apiUrl } from "../config/url";
+import axios from "axios";
 
-const getProduct = (id) => {
-  return fetch(
-    `${url}${id}`
-  ).then((response) => response.json());
-};
+
 
 const Preview = () => {
   const [product, setProduct] = useState({});
   const params = useParams();
   const [count, setCount] = useState(1)
+  console.log(params.id);
+  const getProduct = async () => {
+    if (!params.id) return;
+    let data = await axios.get(apiUrl + "/products/" + params.id);
+    setProduct(data.data);
+  };
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    getProduct(params.id)
-      .then((data) => {
-        setProduct(data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    getProduct();
   }, [params.id]);
 
   let nv = useNavigate()
-
+  console.log(product);
 
 
   return (
@@ -44,7 +40,7 @@ const Preview = () => {
           <div className="image_container">
             <img
               className="product_image"
-              src={product.url}
+              src={product.image}
               alt={product.name}
             />
           </div>
@@ -80,7 +76,7 @@ const Preview = () => {
                   disabled={count === 1}
                   onClick={() => {
                     setCount(count - 1);
-                    dispatch(cartDecQty(params.id, product.price, count - 1, localStorage.getItem("token") || "g"))
+                    dispatch(cartDecQty(params.id, product.price, count - 1, localStorage.getItem("token")))
                   }}
                 >
                   <RemoveIcon />
@@ -91,7 +87,7 @@ const Preview = () => {
                   className="incement_count_decrement"
                   onClick={() => {
                     setCount(count + 1);
-                    dispatch(cartIncQty(params.id, product.price, count + 1, localStorage.getItem("token") || "g"))
+                    dispatch(cartIncQty(params.id, product.price, count + 1, localStorage.getItem("token")))
                   }}
                 >
                   <AddIcon />
@@ -100,7 +96,7 @@ const Preview = () => {
               <div>
                 <button className="add_to_cart_button"
                   onClick={() => {
-                    dispatch(addCart(product, localStorage.getItem("token") || "g"))
+                    dispatch(addCart({ ...product, quantity: count }, localStorage.getItem("token") || "g"))
                     nv("/cart");
                   }}
                 >ADD TO CART</button>
