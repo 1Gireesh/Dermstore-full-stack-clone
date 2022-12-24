@@ -1,6 +1,6 @@
 # Construct Week Project of UNIT-5
 
-# [dermstore.com clone](https://www.dermstore.com/)
+# [dermstore.com clone](https://celadon-piroshki-a9a67d.netlify.app/)
 
 ## Project code - rhetorical-cub-8075
 
@@ -41,8 +41,8 @@ Dermstore is US web store which sells cosmetics and skin care products. In 2021,
 
 ## Deployed link of the project
 
-- https://lambent-gumdrop-f955d9.netlify.app/ ( Deployed with backend API )
-- https://flourishing-chimera-c30cfd.netlify.app/ ( Deployed without backend API you have to clone the repositories then run the backend in local system )
+- https://celadon-piroshki-a9a67d.netlify.app/ ( Deployed with backend API )
+- https://celadon-piroshki-a9a67d.netlify.app/ ( Deployed without backend API you have to clone the repositories then run the backend in local system )
 *HomePage
 <img src="https://i.imgur.com/2DPQevY.png" alt="Homepage" />
 *SearchBox
