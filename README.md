@@ -23,10 +23,12 @@
 
 Dermstore is US web store which sells cosmetics and skin care products. In 2021, it was acquired by THG plc from Target Corporation for £260.9m and migrated onto the company's Ingenuity e-commerce platform.
 
-## Functionality implemented
+## functionalities implemented in pages
 
 - Navbar
 - Home page
+- All Products
+- Single product preview 
 - Home page slider
 - Product slider
 - Search function
@@ -41,4 +43,15 @@ Dermstore is US web store which sells cosmetics and skin care products. In 2021,
 
 - https://lambent-gumdrop-f955d9.netlify.app/ ( Deployed with backend API )
 - https://flourishing-chimera-c30cfd.netlify.app/ ( Deployed without backend API you have to clone the repositories then run the backend in local system )
-
+*HomePage
+<img src="https://i.imgur.com/2DPQevY.png" alt="Homepage" />
+*SearchBox
+<img src="https://i.imgur.com/BiGDZ1b.png" alt="SearchBox" />
+*All products
+<img src="https://i.imgur.com/8VJEagZ.png" alt="All products" />
+*Product preview page
+<img src="https://i.imgur.com/wBj6QFp.png" alt="Preview page" />
+*Carts items page
+<img src="https://i.imgur.com/IyQZhsk.png" alt="Cart items Page" />
+*Signup & Login page
+<img src="https://i.imgur.com/5nSvHdz.png" alt="All products" />
