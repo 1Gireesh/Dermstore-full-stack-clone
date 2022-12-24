@@ -55,3 +55,6 @@ Dermstore is US web store which sells cosmetics and skin care products. In 2021,
 <img src="https://i.imgur.com/IyQZhsk.png" alt="Cart items Page" />
 *Signup & Login page
 <img src="https://i.imgur.com/5nSvHdz.png" alt="All products" />
+*payment page like that checkout-page
+![checkout](https://user-images.githubusercontent.com/101393695/209431501-579e776c-08db-495f-ad0d-75496834b551.png)
+
