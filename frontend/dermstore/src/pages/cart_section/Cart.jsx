@@ -4,6 +4,7 @@ import { getCarts } from "../../redux/Cart/cart.action";
 import "../../css/Cart/Cart.css";
 import CartItem from "./CartItem";
 
+
 export function Cart() {
   const dispatch = useDispatch();
   const { cartItems, price } = useSelector((store) => store.cart);
@@ -26,8 +27,10 @@ export function Cart() {
         </div>
         <div className="cartItems">
           {cartItems && cartItems.map((e, i) => <CartItem key={i} cart={e}></CartItem>)}
-        </div>
 
+
+        </div>
+           
       </div>
     </div>
   );
