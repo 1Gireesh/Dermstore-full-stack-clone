@@ -28,10 +28,8 @@ app.get("/", async (req, res) => {
 });
 
 
-
 app.post("/", async (req, res) => {
     let id = req.userId || req.headers.token;
-    console.log(id, req.body)
     let product = new mongoose.Types.ObjectId(req.body.product)
     try {
         let b = await Product.findById(product);

@@ -21,13 +21,10 @@ app.get("/", async (req, res) => {
 
 
 app.get("/search", async (req, res) => {
+    let q = ("/" + req.query.q + "/i")
     try {
-        let prd = await product.find();
-        let q = req.query.q;
-        if (q)
-            res.send(prd.filter((e, i) => e.name && e.name.toLocaleLowerCase().includes(q.toLocaleLowerCase())))
-        else
-            res.send(prd);
+        let prd = await product.find({ name: { '$regex': req.query.q, $options: "i" } }).limit(5);
+        res.send(prd);
     } catch (e) {
         res.send(e.message);
     }

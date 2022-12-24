@@ -30,9 +30,9 @@ const HomePage = () => {
 
   return (
     <div style={{ zIndex: "-10",marginTop: "180px" }}>
-      <Slideshow data={slideImages} />
       <Slider0 h2={'2x Points on EltaMD'} p1={'Rewards members earn DOUBLE on sunscreen, moisturizers & more. Plus, receive a $16 gift when you spend $75+ on the brand.'} />
       <Slider1 />
+      <Slideshow data={slideImages} />
       <Slider0 h2={'Shop By Category'} p1={''} />
       <Slider2 data={data} />
       <Slider0 h2={'BestSellers'} p1={''} />

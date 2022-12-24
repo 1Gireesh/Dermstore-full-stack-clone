@@ -16,7 +16,6 @@ app.use("/carts",cartRouter);
 app.use("/user",userRouter)
 
 app.all('/', (req, res) => {
-    console.log("Just got a request!")
     res.send('Yo!')
 })
 

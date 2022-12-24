@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import "./style/search.css";
 import recomendNames from "./searchRecomendations.json";
+import { apiUrl } from "../../config/url";
 
 const recomend = val => {
     if (val)
@@ -14,21 +15,20 @@ let id;
 
 
 export default function SearchBox() {
-    const nv = useNavigate()
+    const navigate = useNavigate()
     const [results, setResults] = useState([]);
     const [suggetions, setSuggetions] = useState([]);
     const [active, setActive] = useState(false);
 
     const search = (val) =>
-        axios.get(`https://wild-polo-shirt-calf.cyclic.app/products?q=${val}`)
+        axios.get(`${apiUrl}/products/search?q=${val}`)
             .then((res) => setResults(res.data))
-
     const debounce = val => {
         setSuggetions(recomend(val));
         clearTimeout(id);
         id = setTimeout(() => val && search(val), 1000);
     }
-
+    console.log(results)
     const handleClick = (e) => {
         document.querySelector('.seacrch_input').value = e;
         setSuggetions([]);
@@ -39,33 +39,23 @@ export default function SearchBox() {
             <input
                 onBlur={() => {
                     setActive(!active);
-                    document.querySelector('#app').style.backgroundColor = "white";
                 }}
                 onFocus={() => {
                     setActive(!active)
-                    document.querySelector('#app').style.backgroundColor = "rgb(0, 0, 0,0.5)";
                 }}
                 onChange={e => debounce(e.target.value)}
                 type="text" className="seacrch_input"
                 placeholder="Search for a product or brand..."
             />
             {active && <div className='searchResults'>
-                <div className='searchSuggetions'>
+
+                {<div className='searchProducts'>
                     {
-                        active && !results.length && suggetions.length > 1 && suggetions.map((e, i) => (
-                            <p
-                                key={i}
-                                onClick={() => handleClick(e)}
-                            >{e}</p>
-                        ))
-                    }
-                </div>
-                {results.length > 1 && <div className='searchProducts'>
-                    {
-                        results.map((e, i) => (<div 
-                        className='productRes' key={i}>
+                        results.map((e, i) => (<div
+                            onClick={ ()=>{navigate("/preview"+e.id);console.log("hi")}}
+                            className='productRes' key={i}>
                             <img
-                            src={e.img} alt="" />
+                                src={e.image} alt="" />
                             <div >
                                 <p >
                                     {

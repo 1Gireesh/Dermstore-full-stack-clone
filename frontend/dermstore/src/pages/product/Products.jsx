@@ -4,6 +4,7 @@ import { apiUrl } from '../../config/url';
 import axios from 'axios';
 import Pagination from './Pagination';
 import ProductContainer from "./productContainer"
+import { Button } from '@mui/material';
 
 export default function Products() {
 
@@ -18,7 +19,7 @@ export default function Products() {
     const { min = 0, max = 500, srt = 1, srtv = "price" } = filters;
     let res = await axios
       .get(`${apiUrl}/products?skip=${(page - 1) * 20}&min=${min}&max=${max}&srt={srt}&srtv=${srtv}`);
-
+    console.log(res.data)
     setProducts((typeof (res.data) != "string") ? res.data : []);
   }
 
@@ -26,15 +27,14 @@ export default function Products() {
     let res = await axios.get(apiUrl + "/products" + "?skip=" + (page - 1) * 20);
     setProducts((typeof (res.data) != "string") ? res.data : []);
   }
-
+console.log(products)
   useEffect(() => {
     getProducts();
   }, [])
 
   return (
     <div className='products'>
-      <button className='toogleSideBar'
-       onClick={() => document.querySelector(".sidebar").classList.toggle("display")}>filter </button>
+      
       {(<div className='sidebar'>
         <div>
           <h2>minimum price ${filters.min} </h2>
@@ -54,7 +54,7 @@ export default function Products() {
           <option value={1}>ascending</option>
           <option value={-1}>descending</option>
         </select>
-        <button onClick={filte}>filter</button>
+        <Button onClick={filte}>filter</Button>
       </div>)}
 
       <div className='productGrid'>
