@@ -2,6 +2,8 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { cartDecQty, cartIncQty, removeCart } from '../../redux/Cart/cart.action';
 
+import { Link } from 'react-router-dom';
+
 const CartItem = ({ cart }) => {
     const token = localStorage.getItem("token");
 
@@ -29,6 +31,7 @@ const CartItem = ({ cart }) => {
                 >-</button>
             </p>
             <p className="">$ {(cart.quantity * product.price).toFixed(2)}</p>
+            <Link to='/checkout'> <button className="btn_checkout">CHECKOUT SECURELY NOW</button></Link>
         </div>
     );
 }

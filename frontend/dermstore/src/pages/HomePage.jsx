@@ -1,17 +1,17 @@
 import React, { useState, useContext } from 'react'
-import Slider1 from '../components/Slider1'
+import Slider1 from '../Components/Slider1'
 // import SliderTwo from '../Components/sider/SiderTwocard'
-import Slider0 from '../components/Slider0'
-import Slideshow from '../components/Slideshow'
+import Slider0 from '../Components/Slider0'
+import Slideshow from '../Components/Slideshow'
 import "../css/style.css"
-import Slider2 from '../components/Slider2'
-import Bestsellers from '../components/Bestsellers'
+import Slider2 from '../Components/Slider2'
+import Bestsellers from '../Components/Bestsellers'
 // import SiderTwocard from '../Components/sider/SiderTwocard'
-import FridaySale from '../components/FridaySale'
-import SideBox from '../components/SideBox'
+import FridaySale from '../Components/FridaySale'
+// import SideBox from '../components/SideBox'
 // import { useEffect } from 'react'
 import axios from 'axios'
-import ImageGrid from '../components/ImageGrid'
+// import ImageGrid from '../components/ImageGrid'
 import {data} from "./data"
 import {data5} from "./data"
 import {slideImages} from "./data"
