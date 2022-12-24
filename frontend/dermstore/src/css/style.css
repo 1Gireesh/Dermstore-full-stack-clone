@@ -4,7 +4,6 @@
     justify-content: center;
     background-size: cover;
     height: 500px;
-  background-color: blue;
     /* width: 100%; */
     z-index: -1;
     /* margin-bottom: -150px; */
@@ -137,9 +136,11 @@
     gap: 10px;
 
   }
+  .SingleImmg>img{
+    width: 100%;
+  }
   .back{
     width: 160%;
-  border: 1px solid blue;
   min-height: fit-content;
   height: 0px;
   background-position: center;
@@ -165,6 +166,9 @@
     margin: auto;
     gap: 10px;
   }
+  .SingleImmg>img{
+    width: 100%;
+  }
   .slideronemore{
     display: none;
   }
@@ -181,7 +185,9 @@
     gap: 10px;
 
   }
-
+  .SingleImmg>img{
+    width: 100%;
+  }
 
 }
 
@@ -221,8 +227,6 @@
   }
   
 
-}
-.card{
 }
 
 

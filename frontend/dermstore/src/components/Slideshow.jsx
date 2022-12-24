@@ -66,7 +66,6 @@ const heading2 =
 
 const Slideshow = ({ data }) => {
   return (
-    <Link to={'/products'}>
     <div style={{ zIndex: "0" }} className='newslider'>
       <Slide easing="ease">
         <div className="each-slide">
@@ -119,7 +118,6 @@ const Slideshow = ({ data }) => {
 
       </Slide>
     </div>
-    </Link>
   )
 };
 

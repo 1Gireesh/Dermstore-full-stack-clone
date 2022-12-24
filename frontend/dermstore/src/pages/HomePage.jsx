@@ -10,6 +10,8 @@ import Bestsellers from '../Components/Bestsellers'
 import FridaySale from '../Components/FridaySale'
 import SideBox from '../Components/SideBox'
 // import { useEffect } from 'react'
+import ReactPlayer from "react-player";
+
 import axios from 'axios'
 import ImageGrid from '../Components/ImageGrid'
 import {data} from "./data"
@@ -57,6 +59,32 @@ const HomePage = () => {
       <Bestsellers data={data5} />
 
       {/* <ImageGrid /> */}
+      <div className="VideoDiv">
+          <ReactPlayer
+            width="100%"
+            height="600px"
+            controls
+            url="https://s1.thcdn.com/productvideo/12902717/dermstore_60sec_16x9_new.mp4"
+          />
+          <h4 style={{ marginTop: "40px", marginBottom: "20px" }}>
+            #MyDermstoreGlow
+          </h4>
+          <p style={{ marginBottom: "40px" }}>
+            We care about what goes on your skin, because of what’s within. Our
+            assortment is top-rated, curated & authenticated—bringing you the
+            highest quality products and straight-from-the-experts info to help
+            you navigate all things beauty and skin care. Join the conversation
+            on Instagram with #MyDermstoreGlow—show us your favorite #Dermstore
+            finds that help you care for the skin you’re in! We’re excited to
+            feature our community’s must-haves all season long.
+          </p>
+          <div className="SingleImmg">
+            <img
+              src="https://static.thcdn.com/images/large/webp/widgets/208-us/06/original-6-055106.png"
+              alt="banner"
+            />
+          </div>
+        </div>
     </div>
   )
 }
